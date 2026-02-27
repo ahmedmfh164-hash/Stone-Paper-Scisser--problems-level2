@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include<cstdlib>
 #include<ctime>
@@ -14,7 +13,6 @@ struct stRoundInfo
 	enGameChoice ComputerChoice=enGameChoice::Stone;
 	enWinner Winner=enWinner::Draw;
 	string WinnerName="";
-
 };
 
 struct stGameResults
@@ -24,8 +22,6 @@ struct stGameResults
 	short ComputerWinTimes = 0;
 	short DrawTimes=0;
 	enWinner GameWinner;
-	string WinnerName="";
-
 };
 
 static int RandomNumber(int From, int To)
@@ -36,16 +32,12 @@ static int RandomNumber(int From, int To)
 
 static enGameChoice GetComputerChoice()
 {
-
 	return (enGameChoice)RandomNumber(1, 3);
-
 }
 
 static enWinner WhoWonTheRound(stRoundInfo RoundInfo)
 {
-
 	if (RoundInfo.PlayerChoice ==RoundInfo.ComputerChoice)
-	
 		return enWinner::Draw;
 	
 	switch (RoundInfo.PlayerChoice)
@@ -62,10 +54,9 @@ static enWinner WhoWonTheRound(stRoundInfo RoundInfo)
 
 static enWinner WhoWonTheGame(short PlayerWinTimes,short ComputerWinTimes)
 {
-	if (PlayerWinTimes > ComputerWinTimes)return enWinner::Player;
-	else if (ComputerWinTimes > PlayerWinTimes)return enWinner::Computer;
+	if (PlayerWinTimes > ComputerWinTimes) return enWinner::Player;
+	else if (ComputerWinTimes > PlayerWinTimes) return enWinner::Computer;
 	else return enWinner::Draw;
-
 }
 
 static string ChoiceName(enGameChoice Choice)
@@ -83,16 +74,12 @@ static string WinnerName(enWinner Winner)
 static enGameChoice ReadPlayerChoice()
 {
 	short Choice;
-
 	do {
-
-		cout << "Your Choice : [1]:Stone, [2]:Paper, [3]:Scissors ? " << endl;
+	    cout << "Your Choice : [1]:Stone, [2]:Paper, [3]:Scissors ? " << endl;
 		cin >> Choice;
-
 	} while (Choice < 1 || Choice>3);
 
 	return (enGameChoice)Choice;
-
 }
 
 static void PrintRoundsResults(stRoundInfo RoundInfo)
@@ -106,14 +93,12 @@ static void PrintRoundsResults(stRoundInfo RoundInfo)
 
 static int ReadRoundsNumber(string Message)
 {
-
 	int Number;
 	do {
 		cout << Message << endl;
 		cin >> Number;
 
 	} while (Number < 1 || Number>10);
-
 	return Number;
 }
 
@@ -139,12 +124,9 @@ static stGameResults PlayGame(short HowManyRounds)
 			DrawTimes++;
 
 		PrintRoundsResults(RoundInfo);
-
 	}
-
 	return { HowManyRounds,PlayerWinTimes,ComputerWinTimes,DrawTimes,
 		WhoWonTheGame(PlayerWinTimes,ComputerWinTimes) }
-	
 ;}
 
 static void StartGame()
@@ -159,7 +141,6 @@ static void StartGame()
 		cout << "\nDo you want to play again ? (Y/N) : ";
 		cin >> PlayerAgain;
 	} while (PlayerAgain == 'Y' || PlayerAgain == 'y');
-
 }
 
 int main()
