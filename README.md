@@ -70,7 +70,7 @@ This project demonstrates several **important C++ concepts**:
 1. Clone the repository
 
 ```bash id="clonetutorial"
-git clone https://github.com/yourusername/stone-paper-scissors-cpp.git
+git clone https://github.com/ahmedmfh164-hash/Stone-Paper-Scisser--problems-level2.git
 ```
 
 2. Open the project using **Visual Studio** or any C++ compiler.
