@@ -119,10 +119,3 @@ GitHub:
 ---
 
 ⭐ If you like this project, consider giving it a **star** on GitHub.
-
----
-
-لو تحب، أستطيع أيضًا:
-
-* عمل **README احترافي جدًا مثل المشاريع الكبيرة (مع badges وصور)**
-* أو **تنظيم كل مشاريعك في GitHub ليبدو بروفايلك احترافيًا للمبرمجين**.
